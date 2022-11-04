@@ -1,0 +1,19 @@
+{
+    "name": "functions_scope_hw",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "jest": {
+        "verbose": true,
+        "testURL": "http://localhost/"
+    },
+    "scripts": {
+        "test": "jest",
+        "testwatch": "jest --watchAll"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^28.1.3"
+    }
+}
