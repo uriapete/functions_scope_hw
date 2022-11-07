@@ -7,7 +7,6 @@
 // 2. calculateCube
 function calculateCube(num) {
     // YOUR CODE HERE
-    console.log('test')
 }
 
 // 3. isAVowel
