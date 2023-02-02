@@ -30,16 +30,23 @@ function isAVowel(letter) {
     return bool0;
 }
 
-console.log(isAVowel('a'));
-console.log(isAVowel('b'));
-console.log(isAVowel('A'));
-console.log(isAVowel('B'));
+// console.log(isAVowel('a'));
+// console.log(isAVowel('b'));
+// console.log(isAVowel('A'));
+// console.log(isAVowel('B'));
 
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
     // YOUR CODE HERE
+    //array of lengths
+    let lenArr = [];
+    lenArr.push(word1.length);
+    lenArr.push(word2.length);
+    return lenArr;
 }
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
 function sumArray(arr) {
