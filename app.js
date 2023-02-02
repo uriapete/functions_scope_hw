@@ -24,16 +24,16 @@ function isAVowel(letter) {
     vowelList = ['a','e','i','o','u','A','E','I','O','U'];
     vowelList.forEach((vowel) => {
         if (letter === vowel) {
-            bool0 = true;
+            bool0 = true; // I wanted it to return true so it could break out, but it didn't work so here's this instead
         }
     })
     return bool0;
 }
 
-// console.log(isAVowel('a'));
-// console.log(isAVowel('b'));
-// console.log(isAVowel('A'));
-// console.log(isAVowel('B'));
+// console.log(isAVowel('a')); //true
+// console.log(isAVowel('b')); //false
+// console.log(isAVowel('A')); //true
+// console.log(isAVowel('B')); //false
 
 
 // 4. getTwoLengths
@@ -46,7 +46,7 @@ function getTwoLengths(word1, word2) {
     return lenArr;
 }
 
-// console.log(getTwoLengths("Hank", "Hippopopalous"));
+// console.log(getTwoLengths("Hank", "Hippopopalous")); //=> [4, 13]
 
 // 5. sumArray
 function sumArray(arr) {
@@ -58,18 +58,43 @@ function sumArray(arr) {
     return sum;
 }
 
-console.log(sumArray([1, 2, 3, 4, 5, 6]));
-// => 21
+// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+// // => 21
 
 // 6.1 checkPrime
 function checkPrime(num) {
     // YOUR CODE HERE
+    //pseudocode:
+    //divisible = false
+    //for i = 2, i <= sqrt(num) && divisible === false, i++ {if num % i === 0 then divisible = true}
+    //return divisible
+    //ok so basically what this is is i modulo num by every number between 2 and sqrt of num (inclusive) and if i get a zero then i set 'divisible' to true (false by default) and then just return divisible
+    //im an idiot it needs to return true if not divisible, oh my god
+    let divisible = false;
+    for (let i = 2; i <= Math.sqrt(num) && !divisible; i++) {
+        if (num % i === 0) {divisible = true}
+    }
+    return !divisible;
 }
+
+//to test check prime
+// console.log(checkPrime(2)); //should be true
+// console.log(checkPrime(5)); //should be true
+// console.log(checkPrime(16)); //should be false
+// console.log(checkPrime(100)); //should be false
+//all good
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
+    //pseudocode:
+    //for i starting at 1, i++ and i <= num, checkPrime(i), and console log if true
+    for (let i = 1; i <=num; i++) {if (checkPrime(i)) {console.log(i);}}
 }
+
+//lets test it
+// printPrimes(157);
+//it seems good
 
 // 7. printLongestWord
 function printLongestWord(arr) {
