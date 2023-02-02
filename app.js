@@ -99,7 +99,17 @@ function printPrimes(num) {
 // 7. printLongestWord
 function printLongestWord(arr) {
     // YOUR CODE HERE
+    //for each item in array, check if longer than last largest (default 0), if true, set longest to that item
+    longestWord = '';
+    arr.forEach(word => {
+        if (word.length > longestWord.length) {longestWord = word;}
+    });
+    return longestWord;
 }
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //should return penutbutt.
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", 'euwfhiwrathirtuhreiua', "big", "blob"])); //should return the nonsense
+
 
 // BONUS!
 
