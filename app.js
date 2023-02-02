@@ -10,7 +10,12 @@
 // 2. calculateCube
 function calculateCube(num) {
     // YOUR CODE HERE
+    let cubeVol = Math.pow(num, 3);
+    // console.log(cubeVol); 
+    return cubeVol;
 }
+
+// console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
