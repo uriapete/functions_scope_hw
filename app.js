@@ -20,7 +20,21 @@ function calculateCube(num) {
 // 3. isAVowel
 function isAVowel(letter) {
     // YOUR CODE HERE
+    let bool0 = false;
+    vowelList = ['a','e','i','o','u','A','E','I','O','U'];
+    vowelList.forEach((vowel) => {
+        if (letter === vowel) {
+            bool0 = true;
+        }
+    })
+    return bool0;
 }
+
+console.log(isAVowel('a'));
+console.log(isAVowel('b'));
+console.log(isAVowel('A'));
+console.log(isAVowel('B'));
+
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
