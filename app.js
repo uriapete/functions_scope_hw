@@ -88,8 +88,8 @@ function checkPrime(num) {
 function printPrimes(num) {
     // YOUR CODE HERE
     //pseudocode:
-    //for i starting at 1, i++ and i <= num, checkPrime(i), and console log if true
-    for (let i = 1; i <=num; i++) {if (checkPrime(i)) {console.log(i);}}
+    //for i starting at 2, i++ and i <= num, checkPrime(i), and console log if true
+    for (let i = 2; i <=num; i++) {if (checkPrime(i)) {console.log(i);}}
 }
 
 //lets test it
