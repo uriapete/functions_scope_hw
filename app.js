@@ -107,16 +107,63 @@ function printLongestWord(arr) {
     return longestWord;
 }
 
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //should return penutbutt.
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", 'euwfhiwrathirtuhreiua', "big", "blob"])); //should return the nonsense
-
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //should return penutbutt.
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", 'euwfhiwrathirtuhreiua', "big", "blob"])); //should return the nonsense
+//all good
 
 // BONUS!
 
 // 8. eulerFibo
 function eulerFibo(num) {
     // YOUR CODE HERE
+    console.log("START");
+    let fiboArr = [1, 2];
+    let evenFibo = [];
+    // let fiboNum = 1;
+    //alr, i'll try to comment along
+
+    //begin a forloop, continue the loop if the next num in fibonacci does not exceed num:
+    for (let i = 0, nextNum = 3; nextNum <= num; i++) {
+        // if the next num does not exist yet, calculate it
+        if (!fiboArr[i+1]) {
+            nextNum = fiboArr[i-1] + fiboArr[i]
+            // then, if it does not exceet num, push it to the fibo arr
+            if (nextNum <= num) {
+                fiboArr.push(nextNum);
+            }
+        }
+        // then conslog the current fibo num
+        console.log(fiboArr[i]);
+        // if the current fibonum is even, push it to the even array
+        if (fiboArr[i] % 2 === 0) {
+            evenFibo.push(fiboArr[i]);
+        }
+    }
+    let evenSum = 0;
+    // for each even num that does not exceet 4mil, add it to the even sum
+    evenFibo.forEach((evenNum, idx) => {
+        if (evenNum <= 4000000) {
+            evenSum += evenNum;
+        }
+    });
+    // return fiboArr; //this was for testing, ignore
+    // console log arrays for testing
+    console.log(`Fibo seq: ${fiboArr}`);
+    console.log(`Even seq: ${evenFibo}`);
+    // return '0 OK';
+    console.log('OK, DONE');
+    return evenSum;
+    //ignore the next 4 lines
+    // while (fiboNum <= num) {
+    //     console.log(fiboNum);
+    //     if 
+    // }
 }
+
+// console.log(eulerFibo(500));
+// console.log(eulerFibo(72));
+// console.log(eulerFibo(53));
+// console.log(eulerFibo(3));
 
 // 9. findNeedle
 function findNeedle(arr) {
