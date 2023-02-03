@@ -164,11 +164,27 @@ function eulerFibo(num) {
 // console.log(eulerFibo(72));
 // console.log(eulerFibo(53));
 // console.log(eulerFibo(3));
+//all good
 
 // 9. findNeedle
 function findNeedle(arr) {
     // YOUR CODE HERE
+    //loop through arr until needle is found
+    let needleIdx = arr.indexOf("needle");
+    // for (let i = 0; ((i < arr.length) && !(needleIdx)); i++) {
+    //     const element = arr[i];
+        
+    // }
+
+    //i am actually stupid i can just use .indexOf
+    //i know the other way i was gonna do it works but i just remembered indexOf exists so why write all that code when javascript can do it for me
+    
+    // if needle does not exist (indexOf set needleIdx to -1) then say not found
+    // otherwise do the thing
+    if (needleIdx < 0) {return `Needle not found`;} else {return `found the needle at position ${needleIdx}`}
 }
+
+// console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])); //good
 
 // 10. sumPositive
 function sumPositive(arr) {
