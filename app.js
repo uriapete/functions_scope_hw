@@ -189,7 +189,18 @@ function findNeedle(arr) {
 // 10. sumPositive
 function sumPositive(arr) {
     // YOUR CODE HERE
+    //loop thru arr, add positives to sum and return sum
+    let evenSum = 0;
+    arr.forEach((num, idx) => {
+        if (num > 0) {
+            evenSum += num;
+        }
+    });
+    return evenSum;
 }
+
+// console.log(sumPositive([1, -4, 7, 12])) // should return 20;
+//all good
 
 module.exports = {
     calculateCube,
