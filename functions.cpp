@@ -24,8 +24,20 @@ bool isAVowel(char letter) {
 //get2Lengths
 
 std::array<int,2> getTwoLengths(std::string word1, std::string word2) {
-    std::array<int,2> twoLengths = {word1.length(), word2.length()};
+    std::array<int,2> twoLengths = {static_cast<int>(word1.length()), static_cast<int>(word2.length())};
     return twoLengths;
+}
+
+
+// sumArray
+// We're gonna use vectors instead
+int sumArray(std::vector<int> numList) {
+    int sum = 0;
+    for (int i = 0; i < numList.size(); i++)
+    {
+        sum+=numList[i];
+    }
+    return sum;
 }
 
 int main() {
@@ -51,5 +63,9 @@ int main() {
         
     }
     std::cout << "}\n\n";
+
+    // SumArray
+    std::vector<int> vect = {1,2,3,4,5,6};
+    std::cout << "Sum Array (vector): ({1,2,3,4,5,6}): " << sumArray(vect) << "\n\n";
     
 }
