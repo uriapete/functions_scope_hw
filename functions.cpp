@@ -67,6 +67,18 @@ void printPrimes(int maxNum) {
     
 }
 
+std::string printLongestWord(std::vector<std::string> wordList){
+    std::string longestWord;
+    for (int i = 0; i < wordList.size(); i++)
+    {
+        if (wordList[i].length() > longestWord.length())
+        {
+            longestWord = wordList[i];
+        }
+    }
+    return longestWord;
+}
+
 int main() {
     // CalcCube
     std::cout << "Calculate Cube: " << std::to_string(calculateCube(5)) << "\n\n";
@@ -102,4 +114,9 @@ int main() {
     std::cout << "Print Primes:";
     printPrimes(97);
     std::cout << "\n\n";
+
+    // PrintLongestWord
+    std::vector<std::string> plwTest = {"BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"};
+
+    std::cout << "Print Longest Word: ({\"BoJack\", \"Princess\", \"Diane\", \"a\", \"Max\", \"Peanutbutter\", \"big\", \"blob\"}): " << printLongestWord(plwTest) << "\n\n";
 }
