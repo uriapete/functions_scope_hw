@@ -40,6 +40,33 @@ int sumArray(std::vector<int> numList) {
     return sum;
 }
 
+// checkPrime
+bool checkPrime(int num) {
+    for (int i = 2; i < sqrt((num)); i++)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+void printPrimes(int maxNum) {
+    for (int i = 2; i <= maxNum; i++)
+    {
+        if (checkPrime(i))
+        {
+            // if (i > 2)
+            // {
+                std::cout << "\n";
+            // }
+            std::cout << i;
+        }
+    }
+    
+}
+
 int main() {
     // CalcCube
     std::cout << "Calculate Cube: " << std::to_string(calculateCube(5)) << "\n\n";
@@ -68,4 +95,11 @@ int main() {
     std::vector<int> vect = {1,2,3,4,5,6};
     std::cout << "Sum Array (vector): ({1,2,3,4,5,6}): " << sumArray(vect) << "\n\n";
     
+    // checkPrime
+    std::cout << "Check Primes: \n" << "2: " << checkPrime(2) << "\n5: " << checkPrime(5) << "\n16: " << checkPrime(16) << "\n53: " << checkPrime(53) << "\n73: " << checkPrime(73) << "\n100: " << checkPrime(100) << "\n\n";
+
+    // printPrimes
+    std::cout << "Print Primes:";
+    printPrimes(97);
+    std::cout << "\n\n";
 }
